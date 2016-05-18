@@ -1,6 +1,6 @@
 {
     "name": "hypertrack",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "HyperTrack API wrapper",
     "keywords": [
         "hypertrack",
@@ -27,7 +27,8 @@
         "chai-as-promised": "~4.1.1",
         "mocha": "~2.1.0",
         "sinon": "*",
-        "istanbul": "*"
+        "istanbul": "*",
+        "coveralls": "*"
     },
     "dependencies": {
         "bluebird": "^2.10.2",
