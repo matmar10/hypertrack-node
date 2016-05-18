@@ -1,0 +1,41 @@
+{
+    "name": "hypertrack",
+    "version": "0.1.0",
+    "description": "HyperTrack API wrapper",
+    "keywords": [
+        "hypertrack",
+        "location tracking",
+        "gps",
+        "api"
+    ],
+    "homepage": "https://github.com/hypertrack/hypertrack-node",
+    "author": "HyperTrack <support@hypertrack.io> (https://www.hypertrack.io/)",
+    "contributors": [
+        "Tapan Pandita <tapan@hypertrack.io> (https://www.hypertrack.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hypertrack/hypertrack-node.git"
+    },
+    "bugs:": "https://github.com/hypertrack/hypertrack-node/issues",
+    "engines": {
+        "node": ">= v0.10.0"
+    },
+    "main": "lib/hypertrack.js",
+    "devDependencies": {
+        "chai": "~1.10.0",
+        "chai-as-promised": "~4.1.1",
+        "mocha": "~2.1.0",
+        "sinon": "*",
+        "istanbul": "*"
+    },
+    "dependencies": {
+        "bluebird": "^2.10.2",
+        "lodash": "^4.11.1",
+        "qs": "^2.4.2"
+    },
+    "license": "MIT",
+    "scripts": {
+        "test": "mocha"
+    }
+}
