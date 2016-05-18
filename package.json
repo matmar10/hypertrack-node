@@ -37,6 +37,6 @@
     },
     "license": "MIT",
     "scripts": {
-        "test": "mocha"
+        "test": "istanbul cover _mocha"
     }
 }
