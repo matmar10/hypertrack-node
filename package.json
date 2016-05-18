@@ -27,7 +27,8 @@
         "chai-as-promised": "~4.1.1",
         "mocha": "~2.1.0",
         "sinon": "*",
-        "istanbul": "*"
+        "istanbul": "*",
+        "coveralls": "*"
     },
     "dependencies": {
         "bluebird": "^2.10.2",
