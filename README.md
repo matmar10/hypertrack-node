@@ -37,7 +37,7 @@ hypertrack.customers.create(
 Additionally, every resource method returns a promise, so you don't have to use the regular callback. E.g.
 
 ```javascript
-// Create a new customer and then a new charge for that customer:
+// Create a new customer and then a new destination for that customer:
 hypertrack.customers.create({
   name: 'Tapan Pandita',
   email: 'support@hypertrack.io'
