@@ -71,4 +71,16 @@ describe('Task Resource', function() {
     });
   });
 
+  describe('cancel', function() {
+    it('Sends the correct request', function() {
+      hypertrack.tasks.cancel('taskID123', {cancelation_time: '2016-03-09T06:00:20.648785Z'});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/tasks/taskID123/canceled/',
+        headers: {},
+        data: {cancelation_time: '2016-03-09T06:00:20.648785Z'},
+      });
+    });
+  });
+
 });
