@@ -71,4 +71,40 @@ describe('Trip Resource', function() {
     });
   });
 
+  describe('add_task', function() {
+    it('Sends the correct request', function() {
+      hypertrack.trips.add_task('tripID123', {task_id: 'taskID123'});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/trips/tripID123/add_task/',
+        headers: {},
+        data: {task_id: 'taskID123'},
+      });
+    });
+  });
+
+  describe('remove_task', function() {
+    it('Sends the correct request', function() {
+      hypertrack.trips.remove_task('tripID123', {task_id: 'taskID123'});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/trips/tripID123/remove_task/',
+        headers: {},
+        data: {task_id: 'taskID123'},
+      });
+    });
+  });
+
+  describe('change_task_order', function() {
+    it('Sends the correct request', function() {
+      hypertrack.trips.change_task_order('tripID123', {task_order: ['taskID123', 'taskID321']});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/trips/tripID123/change_task_order/',
+        headers: {},
+        data: {task_order: ['taskID123', 'taskID321']},
+      });
+    });
+  });
+
 });
