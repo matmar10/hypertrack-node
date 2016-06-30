@@ -85,7 +85,7 @@ describe('Task Resource', function() {
 
   describe('editable_url', function() {
     it('Sends the correct request', function() {
-      hypertrack.tasks.complete('taskID123', {'editable': 'once'});
+      hypertrack.tasks.editable_url('taskID123', {'editable': 'once'});
       expect(hypertrack.LAST_REQUEST).to.deep.equal({
         method: 'POST',
         url: '/api/v1/tasks/taskID123/editable_url/',

@@ -1,6 +1,6 @@
 {
     "name": "hypertrack",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "HyperTrack API wrapper",
     "keywords": [
         "hypertrack",
