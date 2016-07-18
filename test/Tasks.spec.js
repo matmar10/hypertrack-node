@@ -71,6 +71,18 @@ describe('Task Resource', function() {
     });
   });
 
+  describe('start', function() {
+    it('Sends the correct request', function() {
+      hypertrack.tasks.start('taskID123', {start_location: {type: 'Point', coordinates: [72, 19]}});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/tasks/taskID123/start/',
+        headers: {},
+        data: {start_location: {type: 'Point', coordinates: [72, 19]}},
+      });
+    });
+  });
+
   describe('cancel', function() {
     it('Sends the correct request', function() {
       hypertrack.tasks.cancel('taskID123', {cancelation_time: '2016-03-09T06:00:20.648785Z'});
