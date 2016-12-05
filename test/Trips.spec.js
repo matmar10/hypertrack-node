@@ -107,4 +107,16 @@ describe('Trip Resource', function() {
     });
   });
 
+  describe('del', function() {
+    it('Sends the correct request', function() {
+      hypertrack.trips.del('tripID123');
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'DELETE',
+        url: '/api/v1/trips/tripID123/',
+        headers: {},
+        data: {},
+      });
+    });
+  });
+
 });
