@@ -59,4 +59,16 @@ describe('driver Resource', function() {
     });
   });
 
+  describe('del', function() {
+    it('Sends the correct request', function() {
+      hypertrack.drivers.del('driverID123');
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'DELETE',
+        url: '/api/v1/drivers/driverID123/',
+        headers: {},
+        data: {},
+      });
+    });
+  });
+
 });

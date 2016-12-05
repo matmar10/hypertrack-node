@@ -59,4 +59,16 @@ describe('fleet Resource', function() {
     });
   });
 
+  describe('del', function() {
+    it('Sends the correct request', function() {
+      hypertrack.fleets.del('fleetID123');
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'DELETE',
+        url: '/api/v1/fleets/fleetID123/',
+        headers: {},
+        data: {},
+      });
+    });
+  });
+
 });

@@ -107,4 +107,16 @@ describe('Task Resource', function() {
     });
   });
 
+  describe('del', function() {
+    it('Sends the correct request', function() {
+      hypertrack.tasks.del('taskID123');
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'DELETE',
+        url: '/api/v1/tasks/taskID123/',
+        headers: {},
+        data: {},
+      });
+    });
+  });
+
 });
