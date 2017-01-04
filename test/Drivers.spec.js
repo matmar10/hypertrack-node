@@ -71,4 +71,28 @@ describe('driver Resource', function() {
     });
   });
 
+  describe('assign_tasks', function() {
+    it('Sends the correct request', function() {
+      hypertrack.drivers.assign_tasks('driverID123', {'task_ids': ['taskID123']});
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/drivers/driverID123/assign_tasks/',
+        headers: {},
+        data: {'task_ids': ['taskID123']},
+      });
+    });
+  });
+
+  describe('end_trip', function() {
+    it('Sends the correct request', function() {
+      hypertrack.drivers.end_trip('driverID123');
+      expect(hypertrack.LAST_REQUEST).to.deep.equal({
+        method: 'POST',
+        url: '/api/v1/drivers/driverID123/end_trip/',
+        headers: {},
+        data: {},
+      });
+    });
+  });
+
 });
