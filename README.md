@@ -2,6 +2,7 @@ HyperTrack Node Bindings
 ==========================
 [![Build Status](https://travis-ci.org/hypertrack/hypertrack-node.svg)](https://travis-ci.org/hypertrack/hypertrack-node/)
 [![Coverage Status](https://coveralls.io/repos/github/hypertrack/hypertrack-node/badge.svg?branch=master)](https://coveralls.io/github/hypertrack/hypertrack-node?branch=master)
+[![npm version](https://badge.fury.io/js/hypertrack.svg)](https://badge.fury.io/js/hypertrack)
 [![Slack Status](http://slack.hypertrack.io/badge.svg)](http://slack.hypertrack.io)
 
 A javascript wrapper for the [HyperTrack api](http://docs.hypertrack.io).
