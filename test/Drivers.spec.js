@@ -37,11 +37,11 @@ describe('driver Resource', function() {
 
   describe('list', function() {
     it('Sends the correct request', function() {
-      hypertrack.drivers.list();
+      hypertrack.drivers.list({page_size: 1});
       expect(hypertrack.LAST_REQUEST).to.deep.equal({
         method: 'GET',
         url: '/api/v1/drivers/',
-        data: {},
+        data: {page_size: 1},
         headers: {},
       });
     });
